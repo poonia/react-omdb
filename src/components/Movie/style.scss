@@ -1,0 +1,132 @@
+@import "../../assets/styles/base.scss";
+
+/* movie */
+.movie {
+    @include flex-display;
+    @include flex-direction(row);
+    width: 100%;
+    // height: 100%;
+
+    .movie-details {
+        @include flex-display;
+        @include flex-direction(column);
+        width:60%;
+
+        section[class^="movie-"] {
+            margin-top: 40px;
+            h5 {
+                color: $lightGreyColor;
+            }
+        }
+        .combo-btn {
+            &.labeled.button {
+                @include flex-display(inline-flex);
+                @include flex-direction(row);
+                background: transparent;
+                padding: 0;
+                border-width: 0;
+                box-shadow: none;
+            }
+
+            &.button {
+                cursor: pointer;
+                display: inline-block;
+                outline: 0;
+                border: none;
+                vertical-align: baseline;
+                background: #e0e1e2 none;
+                margin: 0 .25em 0 0;
+                padding: .78571429em 1.5em .78571429em;
+                text-align: center;
+                border-radius: 3px 0px 0px 3px;
+                box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34,36,38,.15) inset;
+                -webkit-tap-highlight-color: #0000;
+            }
+
+        }
+
+
+        /* Button */
+        .stat-label {
+            margin: 0.25em;
+            white-space: nowrap;
+            border: 1px solid #353F4C;
+            display: inline-block;
+            border-radius: 0.25em;
+
+            .stat-content {
+                border-radius: 0.25em;
+                white-space: nowrap;
+                color: #fff;
+            }
+
+            .stat-content,
+            &.stat-label--icon > .stat-icon {
+                padding: 0.5em 1em;
+                display: inline-block;
+                transition: 0.25s all;
+            }
+
+            /* Button with an icon */
+            &.stat-label--icon {
+                .stat-icon {
+                    border-radius: 0.25em 0 0 0.25em;
+                    position: relative;
+                    font-weight: bold;
+                    font-style: normal;
+                    color: #353F4C;
+                    background: transparent;
+                }
+
+                .stat-content {
+                    border-radius: 0 0.25em 0.25em 0;
+                }
+            }
+
+            &.imdb {
+                .stat-icon {
+                    background: #FF9F1C;
+                    color:#000;
+                }
+            }
+
+            &.rotton-tom {
+                .stat-icon {
+                    background: #FF4040;
+                    color:#000;
+                }
+            }
+
+
+
+        }
+
+
+
+
+        .movie-other-details {
+            @include flex-display;
+            @include flex-direction(row);
+
+            section[class^="movie-"] {
+                margin-right: 20px;
+                ul {
+                    list-style: none;
+                }
+            }
+        }
+
+    }
+
+    .movie-poster {
+        @include flex-display;
+        width:40%;
+        text-align: center;
+
+        img {
+            border-radius: 7px;
+            text-align: center;
+        }
+    }
+
+}

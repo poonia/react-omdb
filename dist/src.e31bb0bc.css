@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, "Roboto", Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+  /* Sets up the Base 10 stuff */
+}
+
+html,
+body {
+  font-family: "Roboto";
+  font-size: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.16;
+  height: 100%;
+  width: 100%;
+  background: #041014;
+  color: #FFF;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* iPads and above*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+.searchbox {
+  position: relative;
+}
+.searchbox .search-input {
+  /* FF 4-18 */
+  /* FF 19+ */
+  /* IE 10+ */
+  font-family: "Roboto";
+  font-size: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.16;
+  width: calc(100% - 36px);
+  height: 45px;
+  border-width: 0;
+  border-radius: 4px;
+  padding-left: 36px;
+}
+.searchbox .search-input::-webkit-input-placeholder {
+  color: #D8D8D8;
+}
+.searchbox .search-input:-moz-placeholder {
+  color: #D8D8D8;
+}
+.searchbox .search-input::-moz-placeholder {
+  color: #D8D8D8;
+}
+.searchbox .search-input:-ms-input-placeholder {
+  color: #D8D8D8;
+}
+.searchbox .search-input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.searchbox .search-input:focus:-moz-placeholder {
+  color: transparent;
+}
+.searchbox .search-input:focus::-moz-placeholder {
+  color: transparent;
+}
+.searchbox .search-input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.searchbox .search-btn {
+  background: url("/icon-magnifier-grey.16ebf113.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 15px;
+  width: 35px;
+  height: 100%;
+  border-width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#header {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#header .logo {
+  margin: 20px 0;
+}
+#header .nav-bar {
+  height: 45px;
+  width: 100%;
+}
+#header .nav-bar .nav-item {
+  display: inline-block;
+  height: 100%;
+  width: auto;
+}
+#header .nav-bar .nav-item .icon-back-arrow {
+  background: url("/icon-arrow-grey.c747ceee.svg") 0 10px no-repeat;
+  display: block;
+  height: 100%;
+  width: 45px;
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, "Roboto", Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+  /* Sets up the Base 10 stuff */
+}
+
+html,
+body {
+  font-family: "Roboto";
+  font-size: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.16;
+  height: 100%;
+  width: 100%;
+  background: #041014;
+  color: #FFF;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Main */
+#main {
+  flex-grow: 1;
+}
+#main .empty-state-container {
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms-flexbox;
+  display: -ms- flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  height: calc(100% - 120px);
+}
+#main .empty-state-container .empty-state {
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms-flexbox;
+  display: -ms- flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}
+#main .empty-state-container .empty-state h3 {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.2;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+#main .empty-state-container .empty-state p {
+  font-family: "Roboto";
+  font-size: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.16;
+  color: #7A8C99;
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, "Roboto", Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+  /* Sets up the Base 10 stuff */
+}
+
+html,
+body {
+  font-family: "Roboto";
+  font-size: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.16;
+  height: 100%;
+  width: 100%;
+  background: #041014;
+  color: #FFF;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* movie */
+.movie {
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms-flexbox;
+  display: -ms- flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+.movie .movie-details {
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms-flexbox;
+  display: -ms- flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 60%;
+  /* Button */
+}
+.movie .movie-details section[class^=movie-] {
+  margin-top: 40px;
+}
+.movie .movie-details section[class^=movie-] h5 {
+  color: #7A8C99;
+}
+.movie .movie-details .combo-btn.labeled.button {
+  display: -webkit- inline-flex;
+  display: -moz- inline-flex;
+  display: -ms-flexbox;
+  display: -ms- inline-flex;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background: transparent;
+  padding: 0;
+  border-width: 0;
+  box-shadow: none;
+}
+.movie .movie-details .combo-btn.button {
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2 none;
+  margin: 0 0.25em 0 0;
+  padding: 0.78571429em 1.5em 0.78571429em;
+  text-align: center;
+  border-radius: 3px 0px 0px 3px;
+  box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+  -webkit-tap-highlight-color: #0000;
+}
+.movie .movie-details .stat-label {
+  margin: 0.25em;
+  white-space: nowrap;
+  border: 1px solid #353F4C;
+  display: inline-block;
+  border-radius: 0.25em;
+  /* Button with an icon */
+}
+.movie .movie-details .stat-label .stat-content {
+  border-radius: 0.25em;
+  white-space: nowrap;
+  color: #fff;
+}
+.movie .movie-details .stat-label .stat-content, .movie .movie-details .stat-label.stat-label--icon > .stat-icon {
+  padding: 0.5em 1em;
+  display: inline-block;
+  transition: 0.25s all;
+}
+.movie .movie-details .stat-label.stat-label--icon .stat-icon {
+  border-radius: 0.25em 0 0 0.25em;
+  position: relative;
+  font-weight: bold;
+  font-style: normal;
+  color: #353F4C;
+  background: transparent;
+}
+.movie .movie-details .stat-label.stat-label--icon .stat-content {
+  border-radius: 0 0.25em 0.25em 0;
+}
+.movie .movie-details .stat-label.imdb .stat-icon {
+  background: #FF9F1C;
+  color: #000;
+}
+.movie .movie-details .stat-label.rotton-tom .stat-icon {
+  background: #FF4040;
+  color: #000;
+}
+.movie .movie-details .movie-other-details {
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms-flexbox;
+  display: -ms- flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.movie .movie-details .movie-other-details section[class^=movie-] {
+  margin-right: 20px;
+}
+.movie .movie-details .movie-other-details section[class^=movie-] ul {
+  list-style: none;
+}
+.movie .movie-poster {
+  display: -webkit- flex;
+  display: -moz- flex;
+  display: -ms-flexbox;
+  display: -ms- flex;
+  display: flex;
+  width: 40%;
+  text-align: center;
+}
+.movie .movie-poster img {
+  border-radius: 7px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */

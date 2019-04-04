@@ -1,0 +1,26 @@
+#header {
+    width: 100%;
+    margin-bottom: 10px;
+
+    .logo {
+        margin: 20px 0;
+    }
+
+    .nav-bar {
+        height: 45px;
+        width: 100%;
+
+        .nav-item {
+            display: inline-block;
+            height: 100%;
+            width: auto;
+            .icon-back-arrow {
+                background: url('../../assets/img/icons/icon-arrow-grey.svg') 0 10px no-repeat;
+                display: block;
+                height: 100%;
+                width: 45px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,32 @@
+@import "./mixin.scss";
+@import "./flex.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%; /* Sets up the Base 10 stuff */
+}
+
+html,
+body {
+    @include roboto-regular;
+    height: 100%;
+    width: 100%;
+    background: $darkColor;
+    color: $primaryColor;
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

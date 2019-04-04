@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+$primaryColor: #FFF;
+$secondaryColor: #D8D8D8;
+$activeColor: #2EC4B6;
+$negativeColor: #FF4040;
+$highlightColor: #FF9F1C;
+$disabledColor: #0000FF;
+
+$darkColor: #041014;
+$greyColor: #1B2329;
+$mildGreyColor: #353F4C;
+$lightGreyColor: #7A8C99;
+
+
+$greenColor: $activeColor;
+$redColor: $negativeColor;
+$yellowColor: $highlightColor;
+
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin roboto-font() {
+    font-family: 'Roboto';
+}
+
+@mixin roboto-regular($sizeValue: 1) {
+    @include roboto-font;
+    @include font-size($sizeValue);
+    font-weight: 400;
+    letter-spacing: 0.16;
+}
+
+@mixin roboto-medium($sizeValue: 1) {
+    @include roboto-font;
+    @include font-size($sizeValue);
+    font-weight: 500;
+    letter-spacing: 0.2;
+}
+@mixin roboto-bold($sizeValue: 1) {
+    @include  roboto-font;
+    @include font-size($sizeValue);
+    font-weight: 700;
+    letter-spacing: 0.2;
+}
+
+@mixin placeholder($color: false){
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+
+    &:focus::-webkit-input-placeholder { color: transparent; }
+    &:focus:-moz-placeholder { color: transparent; } /* FF 4-18 */
+    &:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
+    &:focus:-ms-input-placeholder { color: transparent; } /* IE 10+ */
+}

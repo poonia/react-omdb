@@ -1,0 +1,27 @@
+@import '../../assets/styles/mixin.scss';
+
+.searchbox {
+    position: relative;
+
+    .search-input {
+        @include placeholder($secondaryColor);
+        @include roboto-regular;
+        width: calc(100% - 36px);
+        height: 45px;
+        border-width: 0;
+        border-radius: 4px;
+        padding-left: 36px;
+    }
+
+    .search-btn {
+        background: url('../../assets/img/icons/icon-magnifier-grey.svg');
+        background-repeat: no-repeat;
+        background-position: 10px 15px;
+        width: 35px;
+        height: 100%;
+        border-width: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
