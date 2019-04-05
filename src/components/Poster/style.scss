@@ -4,15 +4,14 @@
 .movieCard {
     @include flex-display;
     @include flex-direction(column);
-    max-width: 160px;
     margin: auto;
     position:relative;
     border-radius: 5px;
+    margin-top: 20px;
 
     .moviePoster {
-        max-width: 180px;
-        max-height: 210px;
         border-radius: 5px;
+        width: 100%;
     }
 
     .movieCaption {

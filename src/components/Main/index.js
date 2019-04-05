@@ -1,30 +1,27 @@
 import React, { Component } from 'react';
-import empty  from '../../assets/img/illustration-empty-state.png';
+import { BrowserRouter as Router, Route, Links } from "react-router-dom";
+
 import './style.scss';
 import { Movie } from '../Movie';
+import { EmptyList } from '../EmptyList';
+import { MovieList } from '../MovieList';
 
 export class Main extends Component {
     constructor(props) {
         super(props);
         this.hide = true;
-
     }
 
     render() {
         return (
-          <main id="main">
+          <Router>
+              <main>
+                    <Route path="/" exact component={EmptyList} />
+                    {/* <Route path="/list/" component={MovieList} /> */}
+                    <Route path="/movie" component={Movie} />
+              </main>
+          </Router>
 
-                <div className="empty-state-container">
-                    <div className="empty-state">
-                        <img src={empty} alt="no result" /><br />
-                        <h3>Don't know what to search?</h3>
-                        <p>Here's a offer you can't refuse</p>
-                    </div>
-                </div>
-
-                {/* <Movie></Movie> */}
-
-          </main>
         );
     }
 }

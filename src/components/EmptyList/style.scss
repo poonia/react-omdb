@@ -1,0 +1,36 @@
+@import "../../assets/styles/base.scss";
+
+.empty-state-container {
+    @include flex-display;
+    @include flex-direction(column);
+    @include justify-content(center);
+    height: calc(100% - 120px);
+
+    .empty-state {
+        @include flex-display;
+        @include flex-direction(column);
+        margin:0 auto;
+        text-align: center;
+
+        h3 {
+            @include roboto-medium(1.5);
+            letter-spacing: 0.8px;
+            margin-bottom: 10px;
+        }
+        p {
+            @include roboto-regular(1);
+            color: $lightGreyColor;
+
+        }
+    }
+}
+
+
+.movies-list {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin: 10px;
+    }
+}

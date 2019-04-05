@@ -8,16 +8,6 @@ export class Header extends Component {
     return (
       <header id="header">
           <img src={logo} className="logo" alt="logo" />
-           <Search></Search>
-
-       {/*
-          <div className="nav-bar">
-            <a href="#" className="nav-item">
-                <span className="icon-back-arrow"></span>
-            </a>
-          </div>
-       */}
-       
       </header>
     );
   }
