@@ -40,12 +40,12 @@ export class EmptyList extends Component {
 
     render() {
         return (
-            <div>
+            <div className="full-height">
                 <Search handler={this.updateMovieList}></Search>
                 { !this.state.movies.length &&
                     <EmptyState></EmptyState>
                 }
-                { this.state.movies.length &&
+                { this.state.movies.length > 0 &&
                     <div className="row">
                         {this.renderMoviesList(this.state.movies)}
                     </div>

@@ -55,8 +55,11 @@ export class Movie extends Component {
 
 function RenderMovieDetails(props) {
     const { Runtime, Year, Rated, Title, Actors, Ratings, Production, Poster, Plot, Language, Genre, Director, Country, Awards, imdbID } = props.data;
+
     return (
+
         <div className="movie">
+            { !!Title &&
             <div className="movie-details">
                 <div className="movie-duration-year">{Runtime} - {Year} - {Rated}</div>
                 <h1 className="movie-title"> {Title} </h1>
@@ -112,9 +115,13 @@ function RenderMovieDetails(props) {
                     </section>
                 </div>
             </div>
+            }
+            { !!Poster &&
             <div className="movie-poster">
                 <img src={Poster} alt={Title} />
             </div>
+            }
         </div>
+
     );
 }

@@ -36336,7 +36336,7 @@ function RenderMovieDetails(props) {
       imdbID = _props$data.imdbID;
   return _react.default.createElement("div", {
     className: "movie"
-  }, _react.default.createElement("div", {
+  }, !!Title && _react.default.createElement("div", {
     className: "movie-details"
   }, _react.default.createElement("div", {
     className: "movie-duration-year"
@@ -36354,7 +36354,7 @@ function RenderMovieDetails(props) {
     className: "movie-genre col-md-2"
   }, _react.default.createElement("h5", null, "Genre"), _react.default.createElement("ul", null, _react.default.createElement("li", null, Genre))), _react.default.createElement("section", {
     className: "movie-director col-md-3"
-  }, _react.default.createElement("h5", null, "Director"), _react.default.createElement("ul", null, _react.default.createElement("li", null, Director))))), _react.default.createElement("div", {
+  }, _react.default.createElement("h5", null, "Director"), _react.default.createElement("ul", null, _react.default.createElement("li", null, Director))))), !!Poster && _react.default.createElement("div", {
     className: "movie-poster"
   }, _react.default.createElement("img", {
     src: Poster,
@@ -36609,9 +36609,11 @@ function (_Component) {
   _createClass(EmptyList, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement(_Search.Search, {
+      return _react.default.createElement("div", {
+        className: "full-height"
+      }, _react.default.createElement(_Search.Search, {
         handler: this.updateMovieList
-      }), !this.state.movies.length && _react.default.createElement(EmptyState, null), this.state.movies.length && _react.default.createElement("div", {
+      }), !this.state.movies.length && _react.default.createElement(EmptyState, null), this.state.movies.length > 0 && _react.default.createElement("div", {
         className: "row"
       }, this.renderMoviesList(this.state.movies)));
     }
@@ -36807,7 +36809,9 @@ function (_Component) {
   _createClass(Main, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement("main", null, _react.default.createElement(_reactRouterDom.Route, {
+      return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement("main", {
+        className: "main-container"
+      }, _react.default.createElement(_reactRouterDom.Route, {
         path: "/",
         exact: true,
         component: _EmptyList.EmptyList
@@ -37129,7 +37133,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61803" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50775" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -15,7 +15,7 @@ export class Main extends Component {
     render() {
         return (
           <Router>
-              <main>
+              <main className="main-container">
                     <Route path="/" exact component={EmptyList} />
                     {/* <Route path="/list/" component={MovieList} /> */}
                     <Route path="/movie" component={Movie} />
