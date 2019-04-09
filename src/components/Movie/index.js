@@ -52,6 +52,24 @@ export class Movie extends Component {
         );
     }
 }
+function RenderMovieStats(props) {
+    return props.data.map((item) => {
+        const {Source, Value} = item;
+        return (
+              Source ==="Internet Movie Database" ?
+                <div className="stat-label stat-label--icon imdb" >
+                    <i className="stat-icon">   <img src={imdbLogo} /> </i>
+                    <span className="stat-content">{Value}</span>
+                </div> : Source ==="Rotten Tomatoes" ?
+                <div className="stat-label stat-label--icon rotton-tom" >
+                    <i className="stat-icon">   <img src={rtLogo} /> </i>
+                    <span className="stat-content">{Value}</span>
+                </div> :
+                null
+        );
+    });
+
+}
 
 function RenderMovieDetails(props) {
     const { Runtime, Year, Rated, Title, Actors, Ratings, Production, Poster, Plot, Language, Genre, Director, Country, Awards, imdbID } = props.data;
@@ -63,29 +81,16 @@ function RenderMovieDetails(props) {
             <div className="movie-details">
                 <div className="movie-duration-year">{Runtime} - {Year} - {Rated}</div>
                 <h1 className="movie-title"> {Title} </h1>
-                {/*
-                <section className="movie-stats">
-                    { Ratings.map(item => {
-                        if(item.Source ==='Internet Movie Database') {
-                            <div className="stat-label stat-label--icon imdb" >
-                                <i className="stat-icon">   <img src={imdbLogo} /> </i>
-                                <span className="stat-content">{item.Value}</span>
-                            </div>
-                        }
-                        if(item.Source ==='Rotten Tomatoes') {
-                            <div className="stat-label stat-label--icon rotton-tom" >
-                                <i className="stat-icon"> <img src={rtLogo} /></i>
-                                <span className="stat-content">{item.Value}</span>
-                            </div>
-                        }});
 
+                <section className="movie-stats">
+                    <RenderMovieStats data={Ratings} />
                     <div className="stat-label stat-label--icon wishlist" >
                         <i className="stat-icon"><img src={emptyHeart} /></i>
                         <span className="stat-content">Add to favourites</span>
                     </div>
 
                 </section>
-                */}
+
 
                 <section className="movie-plot row">
                     <div className="col-md-10 col-lg-8">

@@ -36317,6 +36317,30 @@ function (_Component) {
 
 exports.Movie = Movie;
 
+function RenderMovieStats(props) {
+  return props.data.map(function (item) {
+    var Source = item.Source,
+        Value = item.Value;
+    return Source === "Internet Movie Database" ? _react.default.createElement("div", {
+      className: "stat-label stat-label--icon imdb"
+    }, _react.default.createElement("i", {
+      className: "stat-icon"
+    }, "   ", _react.default.createElement("img", {
+      src: _logoImdb.default
+    }), " "), _react.default.createElement("span", {
+      className: "stat-content"
+    }, Value)) : Source === "Rotten Tomatoes" ? _react.default.createElement("div", {
+      className: "stat-label stat-label--icon rotton-tom"
+    }, _react.default.createElement("i", {
+      className: "stat-icon"
+    }, "   ", _react.default.createElement("img", {
+      src: _logoRottenTomatoes.default
+    }), " "), _react.default.createElement("span", {
+      className: "stat-content"
+    }, Value)) : null;
+  });
+}
+
 function RenderMovieDetails(props) {
   var _props$data = props.data,
       Runtime = _props$data.Runtime,
@@ -36343,6 +36367,18 @@ function RenderMovieDetails(props) {
   }, Runtime, " - ", Year, " - ", Rated), _react.default.createElement("h1", {
     className: "movie-title"
   }, " ", Title, " "), _react.default.createElement("section", {
+    className: "movie-stats"
+  }, _react.default.createElement(RenderMovieStats, {
+    data: Ratings
+  }), _react.default.createElement("div", {
+    className: "stat-label stat-label--icon wishlist"
+  }, _react.default.createElement("i", {
+    className: "stat-icon"
+  }, _react.default.createElement("img", {
+    src: _iconHeartGrey.default
+  })), _react.default.createElement("span", {
+    className: "stat-content"
+  }, "Add to favourites"))), _react.default.createElement("section", {
     className: "movie-plot row"
   }, _react.default.createElement("div", {
     className: "col-md-10 col-lg-8"
@@ -36372,6 +36408,7 @@ function RenderMovieDetails(props) {
   }
 
   reactHotLoader.register(Movie, "Movie", "/Users/praveen.poonia/poc/react-omdb/src/components/Movie/index.js");
+  reactHotLoader.register(RenderMovieStats, "RenderMovieStats", "/Users/praveen.poonia/poc/react-omdb/src/components/Movie/index.js");
   reactHotLoader.register(RenderMovieDetails, "RenderMovieDetails", "/Users/praveen.poonia/poc/react-omdb/src/components/Movie/index.js");
 })();
 
@@ -37133,7 +37170,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50775" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62280" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
